@@ -1,4 +1,4 @@
-//leetcode - Rotate a 3D mar=trix by 90.
+//leetcode-48 : Rotate Image 
 
 //Appraoch : 1. Transpose the matrix 2. Then reverse each row
 
