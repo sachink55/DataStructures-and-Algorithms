@@ -1,4 +1,4 @@
-//leetcode - 300 : Longest Common Subsequence
+//leetcode - 300 : Longest Increasing Subsequence
 
 //Approach - 1 : Using Recursion
 //T.C : O(2^n)

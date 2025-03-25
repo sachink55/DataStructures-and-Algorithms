@@ -81,3 +81,45 @@ public:
 
     }
 };
+
+//...........................................................................................
+class Solution {
+public:
+    string reorganizeString(string s) {
+        vector<int> freq(26, 0);
+        int n = s.size();
+
+        for (int i = 0; i < s.size(); i++) {
+            freq[s[i] - 'a']++;
+            if (freq[s[i] - 'a'] > (n + 1) / 2)
+                return "";
+        }
+
+        //maxHeap
+        priority_queue<pair<int, char>> pq;
+        for (int i = 0; i < 26; i++) {
+            if (freq[i] != 0) {
+                pq.push({freq[i], (char)i + 'a'});
+            }
+        }
+
+        string ans = "";
+        while (pq.size() >= 2) {
+            auto p1 = pq.top();
+            pq.pop();
+            auto p2 = pq.top();
+            pq.pop();
+
+            ans += p1.second; p1.first--;
+            ans += p2.second; p2.first--;
+
+            if (p1.first > 0) pq.push(p1);
+            if (p2.first > 0) pq.push(p2);
+        }
+
+        if (pq.size() == 1)
+            ans += pq.top().second;
+
+        return ans;
+    }
+};

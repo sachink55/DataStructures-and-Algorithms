@@ -49,6 +49,7 @@ public:
         dp[i] = max(opt1, opt2);
         return dp[i];
     }
+    
     int rob(vector<int>& nums) {
         int n = nums.size() + 1;
         vector<int>dp(n+1, -1);
