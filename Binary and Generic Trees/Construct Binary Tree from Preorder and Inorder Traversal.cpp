@@ -8,7 +8,7 @@
                 valueToIndexMap[element] = i;
             }
         }
-        TreeNode* constructTreeFromPreAndInorder(vector<int>preorder, vector<int>inorder, int &preIndex,int inorderStart, int inorderEnd, int size,map<int,int>&valueToIndexMap){
+        TreeNode* constructTreeFromPreAndInorder(vector<int>preorder, vector<int>inorder, int &preIndex,int inorderStart, int inorderEnd, int size, map<int,int>&valueToIndexMap){
             //base case
             if(preIndex >= size || inorderStart > inorderEnd){
                 return NULL;

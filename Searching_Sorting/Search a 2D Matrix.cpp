@@ -1,4 +1,4 @@
-//leetcode-74: Search a 2D Matrix
+//leetcode-74: Search a 2D Array (Matrix)
 
 //Approach-1 : Select row where target can be present and then apply binary search on that row
 //TC : O(n + logm) where n=number of rows and m=number of columns
