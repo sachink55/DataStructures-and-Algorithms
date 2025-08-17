@@ -65,7 +65,7 @@ class Solution {
     int getKthFromLast(Node *head, int k) {
         Node *first = head, *second = head;
 
-        // Move firs` k steps
+        // Move first k steps
         for (int i = 0; i < k; i++) {
             if (!first) return -1; // If k is greater than list length
             first = first->next;

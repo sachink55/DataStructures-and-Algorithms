@@ -8,7 +8,7 @@ class Solution {
 public:
 
     string decodeString(string s) {
-        Approach-1: Using Stack - O(n)
+        //Approach-1: Using Stack - O(n)
         stack<string> st;
         for(char ch : s) {
             if(ch == ']') {

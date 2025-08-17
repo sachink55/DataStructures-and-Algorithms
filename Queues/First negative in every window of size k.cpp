@@ -23,7 +23,7 @@ class Solution {
                 ans.push_back(0);
             
             // remove out of window elements
-            if (!dq.empty() && dq.front() <= i - k) {
+            if (!dq.empty() && i - dq.front() >= k) {
                 dq.pop_front();
             }
             

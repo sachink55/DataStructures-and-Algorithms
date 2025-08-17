@@ -30,9 +30,17 @@ public:
         ListNode *a = headA, *b = headB;
 
         while (a != b) {
-            a = (a == NULL) ? headB : a->next;
-            b = (b == NULL) ? headA : b->next;
+            if (a == NULL) a = headB;   // switch to other list
+            else a = a->next;
+            
+            if (b == NULL) b = headA;   // switch to other list
+            else b = b->next;
         }
+
+        // while (a != b) {
+        //     a = (a == NULL) ? headB : a->next;
+        //     b = (b == NULL) ? headA : b->next;
+        // }
 
         return a;  
     }

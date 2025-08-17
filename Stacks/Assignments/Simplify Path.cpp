@@ -9,7 +9,7 @@ public:
 
     string simplifyPath(string path) {
         stack<string>st;
-        int i =0;
+        int i = 0;
         while(i < path.size()){
             int start = i;
             int end = i+1;

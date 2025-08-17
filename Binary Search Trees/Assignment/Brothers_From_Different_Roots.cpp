@@ -16,7 +16,7 @@ public:
         return root->data;
         inorder(root->right, arr);
     }
-    void getPairs(Node* root1, Node* root2, int x, vector<int>&arr,int &count){
+    void getPairs(Node* root1, Node* root2, int x, vector<int>&arr, int &count){
         if(!root1)
             return;
         getPairs(root1->left, root2, x, arr, count);

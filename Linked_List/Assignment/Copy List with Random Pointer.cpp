@@ -34,7 +34,7 @@ public:
     Node* copyRandomList(Node* head) {
         if(!head) return 0;
 
-        //step1 : clone A->A'
+        //step1 : clone A->A' (make a list with old nodes and new nodes alternating)
         Node* it = head;    //iterate over old list
         while(it){
             Node* clonedHead = new Node(it->val);

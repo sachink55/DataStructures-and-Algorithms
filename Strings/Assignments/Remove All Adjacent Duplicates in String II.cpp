@@ -37,6 +37,7 @@ public:
 //TC: O(n)
 //SC: O(n)
 
+class Solution {
 public:
     string removeDuplicates(string s, int k) {
         int i=0, j=0;
